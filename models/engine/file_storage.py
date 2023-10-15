@@ -37,7 +37,7 @@ class FileStorage:
         json_objects = {}
         for key in self.__objects:
             json_objects[key] = self.__objects[key].to_dict()
-                    
+
         with open(self.__file_path, 'w') as f:
             json.dump(json_objects, f)
 
@@ -48,5 +48,5 @@ class FileStorage:
                 jo = json.load(f)
             for key in jo:
                 self.__objects[key] = classes[jo[key]["__class__"]](**jo[key])
-        except:
-            pass
+        except FileNotFoundError:
+            return
