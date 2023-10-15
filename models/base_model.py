@@ -3,7 +3,7 @@
 
 from uuid import uuid4
 from datetime import datetime
-
+import models 
 
 class BaseModel:
     """
@@ -15,11 +15,11 @@ class BaseModel:
         Initialize the BaseModel class
         """
 
-        from models import storage
+#        from models import storage
         if not kwargs:
             self.id = str(uuid4())
             self.created_at = self.updated_at = datetime.now()
-            storage.new(self)
+            models.storage.new(self)
         else:
             for key, value in kwargs.items():
                 if key != '__class__':
