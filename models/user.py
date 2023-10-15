@@ -5,7 +5,6 @@ from models.base_model import BaseModel
 
 class User(BaseModel):
     """A class for managing user objects
-    
     Attributes:
         email (str): the email of the user
         password (str): the password of the user

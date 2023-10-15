@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """A simple calculator program"""
 
+
 class Calculator:
     """class that contain some of the most common maths calculator functions"""
 
