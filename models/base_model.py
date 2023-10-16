@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""A module that implements the BaseModel class"""
+"""A script that implements the BaseModel class"""
 
 from uuid import uuid4
 from datetime import datetime
